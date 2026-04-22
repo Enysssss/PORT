@@ -1,77 +1,208 @@
 /* =============================================
-   CONTACT — Formulaire de contact
+   CONTACT — Pourquoi moi + coordonnées
    ============================================= */
 
 #contact {
-  background: var(--dark);
-  padding: 160px 12vw;
-  text-align: center;
+  background: #f9f9f7;
+  padding: 100px 6vw;
 }
 
-#contact h2 {
+/* ── Layout ── */
+.hire-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+/* ── Photo ── */
+.hire-photo-wrap {
+  position: relative;
+  width: 270px;
+  height: 340px;
+  border-radius: 28px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.13);
+}
+
+.hire-orange-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--orange);
+}
+
+.hire-photo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 1;
+}
+
+/* ── Titre ── */
+.hire-content h2 {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(56px, 8vw, 88px);
+  font-size: clamp(28px, 4vw, 44px);
   font-weight: 800;
-  color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
+  color: var(--dark);
 }
 
-#contact h2 span {
+.hire-content h2 span {
   color: var(--orange);
 }
 
-#contact > p {
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 72px;
-  font-size: 28px;
+.hire-tagline {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 460px;
 }
 
-/* Formulaire */
-.contact-form {
-  max-width: 520px;
-  margin: 0 auto;
+.hire-tagline strong {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+/* ── Liste "Pourquoi moi" ── */
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 14px 18px;
-  color: #fff;
-  font-family: 'Nunito', sans-serif;
-  font-size: 14px;
-  outline: none;
-  transition: border-color .2s;
-  resize: none;
+.why-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 14px;
+  border: 1.5px solid rgba(0,0,0,0.06);
+  transition: border-color .2s, box-shadow .2s;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.35);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
+.why-list li:hover {
   border-color: var(--orange);
+  box-shadow: 0 4px 18px rgba(249,115,22,0.08);
 }
 
-.contact-form button {
+.why-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
   background: var(--orange);
   color: #fff;
-  border: none;
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Syne', sans-serif;
+}
+
+.why-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.why-text strong {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.why-text span {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ── Coordonnées ── */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.contact-link:hover {
+  color: var(--orange);
+}
+
+.contact-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  padding: 4px 0;
+  background: var(--dark);
+  color: #fff;
+  border-radius: 8px;
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  transition: background .2s;
+}
+
+.contact-link:hover .contact-badge {
+  background: var(--orange);
+}
+
+/* ── Bouton ── */
+.btn-hire {
+  display: inline-block;
+  border: 2.5px solid var(--dark);
+  border-radius: 14px;
+  padding: 14px 44px;
   font-family: 'Syne', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  cursor: pointer;
-  transition: opacity .2s;
+  color: var(--dark);
+  text-decoration: none;
+  transition: background .2s, color .2s, border-color .2s;
 }
 
-.contact-form button:hover {
-  opacity: .85;
+.btn-hire:hover {
+  background: var(--dark);
+  color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hire-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hire-photo-wrap {
+    display: flex;
+    justify-content: center;
+  }
 }
