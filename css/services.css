@@ -1,0 +1,202 @@
+/* =============================================
+   SERVICES — Section dark, glassmorphism, blobs
+   ============================================= */
+
+#service {
+  background: var(--dark);
+  padding: 80px 6vw;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+}
+
+.services-header h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  color: #fff;
+}
+
+.services-header h2 span {
+  color: var(--orange);
+}
+
+.services-header p {
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 380px;
+  line-height: 1.6;
+  font-size: 14px;
+  padding-top: 8px;
+}
+
+/* Grid de cartes */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+  transition: transform .3s, border-color .3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(249, 115, 22, 0.4);
+}
+
+.service-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+/* Mockup preview dans la card */
+.service-mockup {
+  border-radius: 12px;
+  background: #2d2d44;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mockup-ui {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+}
+
+.mockup-panel {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  flex: 1;
+  padding: 8px;
+}
+
+.mockup-bar {
+  height: 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 6px;
+}
+
+.mockup-bar.accent {
+  background: var(--orange);
+  width: 60%;
+}
+
+.mockup-bar.short {
+  width: 40%;
+}
+
+.mockup-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--orange);
+  opacity: 0.7;
+  margin: 4px 0;
+}
+
+/* Flèche en bas à droite */
+.service-arrow {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  transition: background .2s;
+}
+
+.service-card:hover .service-arrow {
+  background: var(--orange);
+}
+
+/* Blobs décoratifs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.blob-1 {
+  width: 200px;
+  height: 200px;
+  background: var(--orange);
+  top: -40px;
+  right: 30%;
+}
+
+.blob-2 {
+  width: 160px;
+  height: 160px;
+  background: #c2410c;
+  bottom: 20px;
+  left: 20%;
+}
+
+/* Dots du carousel */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background .2s, width .2s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--orange);
+  width: 28px;
+  border-radius: 6px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,77 @@
+/* =============================================
+   CONTACT — Formulaire de contact
+   ============================================= */
+
+#contact {
+  background: var(--dark);
+  padding: 160px 12vw;
+  text-align: center;
+}
+
+#contact h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(56px, 8vw, 88px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#contact h2 span {
+  color: var(--orange);
+}
+
+#contact > p {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 72px;
+  font-size: 28px;
+}
+
+/* Formulaire */
+.contact-form {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--orange);
+}
+
+.contact-form button {
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+
+.contact-form button:hover {
+  opacity: .85;
+}

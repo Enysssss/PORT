@@ -1,0 +1,114 @@
+/* =============================================
+   BASE — Reset, Variables, Typographie, Animations
+   ============================================= */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange:       #8B1538;
+  --orange-light: #C41E5E;
+  --dark:         #1a1a2e;
+  --navy:         #2d3561;
+  --gray:         #6b7280;
+  --bg:           #ffffff;
+  --bg2:          #f8f7f4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 32px;
+  background: var(--bg);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+/* ── Boutons globaux ── */
+.btn-primary {
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  border-radius: 80px;
+  padding: 28px 56px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(26,26,46,0.25);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--dark);
+  border: 2px solid var(--dark);
+  border-radius: 80px;
+  padding: 28px 56px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.btn-secondary:hover {
+  background: var(--dark);
+  color: #fff;
+}
+
+/* ── Animations ── */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translate(-40px, -50%); }
+  to   { opacity: 1; transform: translate(0, -50%); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translate(40px, -50%); }
+  to   { opacity: 1; transform: translate(0, -50%); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-5deg) scale(1); }
+  50%       { transform: rotate(5deg) scale(1.05); }
+}
+
+/* ── Footer ── */
+footer {
+  background: #111;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  padding: 40px;
+  font-size: 24px;
+}
+
+/* ── Responsive global ── */
+@media (max-width: 768px) {
+  .hero-quote,
+  .hero-stats {
+    display: none;
+  }
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enys — Developpeur</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/resume.css">
+  <link rel="stylesheet" href="css/hire.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav>
+    <!-- <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#service">Service</a></li>
+    </ul> -->
+
+    <a href="#home" class="nav-logo">
+      <span class="nav-logo-icon">ET</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#service">Projets</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <section id="home">
+
+    <h1 class="hero-title">I'm <span>Enys</span>,<br>Developpeur</h1>
+
+    <!-- Citation gauche -->
+    <!-- <div class="hero-quote">
+      <div class="quote-icon">"</div>
+      <p>Jenny's Exceptional product design ensure our website's success. Highly Recommended</p>
+    </div> -->
+
+    <!-- Stats droite -->
+    <!-- <div class="hero-stats">
+      <div class="stars">★★★★★</div>
+      <div class="big">10 Years</div>
+      <div class="small">Experience</div>
+    </div> -->
+
+    <!-- Photo + doodles -->
+    <div class="hero-visual">
+
+      <div class="hero-circle"></div>
+
+      <!--
+        PHOTO : remplace ce SVG par une vraie image :
+        <img class="hero-photo" src="assets/jenny-hero.png" alt="Jenny">
+      -->
+      <img class="hero-photo" src="assets/enys.png" alt="Enys">
+
+      <!-- Doodles (apparaissent au hover) -->
+      <!-- <div class="doodles-layer">
+        <svg class="doodle" width="44" height="44" viewBox="0 0 44 44">
+          <path d="M22 38 C22 38 4 28 4 16 C4 10 8 6 14 6 C17 6 20 8 22 11 C24 8 27 6 30 6 C36 6 40 10 40 16 C40 28 22 38 22 38Z" stroke="#5b21b6" stroke-width="2.5" fill="none"/>
+        </svg>
+        <svg class="doodle" width="36" height="36" viewBox="0 0 36 36">
+          <path d="M18 4 L21 14 L32 14 L23 20 L26 30 L18 24 L10 30 L13 20 L4 14 L15 14Z" stroke="#5b21b6" stroke-width="2.2" fill="none"/>
+        </svg>
+        <svg class="doodle" width="52" height="30" viewBox="0 0 52 30">
+          <ellipse cx="26" cy="15" rx="12" ry="12" stroke="#5b21b6" stroke-width="2.2" fill="none"/>
+          <ellipse cx="26" cy="17" rx="24" ry="8"  stroke="#5b21b6" stroke-width="2"   fill="none"/>
+        </svg>
+        <svg class="doodle" width="32" height="32" viewBox="0 0 32 32">
+          <path d="M6 26 L26 6 M14 6 L26 6 L26 18" stroke="#5b21b6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="doodle" width="38" height="38" viewBox="0 0 38 38">
+          <circle cx="19" cy="19" r="5" stroke="#5b21b6" stroke-width="2" fill="none"/>
+          <ellipse cx="19" cy="8"  rx="4" ry="6" stroke="#5b21b6" stroke-width="2" fill="none"/>
+          <ellipse cx="19" cy="30" rx="4" ry="6" stroke="#5b21b6" stroke-width="2" fill="none"/>
+          <ellipse cx="8"  cy="19" rx="6" ry="4" stroke="#5b21b6" stroke-width="2" fill="none"/>
+          <ellipse cx="30" cy="19" rx="6" ry="4" stroke="#5b21b6" stroke-width="2" fill="none"/>
+        </svg>
+        <svg class="doodle" width="58" height="34" viewBox="0 0 58 34">
+          <path d="M12 26 Q4 26 4 18 Q4 10 12 10 Q13 4 20 4 Q26 4 28 9 Q32 6 37 8 Q44 8 44 16 Q50 16 50 22 Q50 26 44 26Z" stroke="#5b21b6" stroke-width="2.2" fill="none"/>
+        </svg>
+        <svg class="doodle" width="30" height="30" viewBox="0 0 30 30">
+          <path d="M15 2 L15 28 M2 15 L28 15 M5 5 L25 25 M25 5 L5 25" stroke="#5b21b6" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+        </svg>
+        <svg class="doodle" width="30" height="28" viewBox="0 0 30 28">
+          <path d="M15 25 C15 25 2 18 2 10 C2 6 5 3 9 3 C11 3 13 4.5 15 7 C17 4.5 19 3 21 3 C25 3 28 6 28 10 C28 18 15 25 15 25Z" stroke="#5b21b6" stroke-width="2.2" fill="none"/>
+        </svg>
+        <svg class="doodle" width="40" height="40" viewBox="0 0 40 40">
+          <path d="M20 20 Q28 12 28 20 Q28 30 18 30 Q8 30 8 18 Q8 6 22 6 Q36 6 36 22" stroke="#5b21b6" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <svg class="doodle" width="44" height="40" viewBox="0 0 44 40">
+          <path d="M4 20 L40 4 L28 36 L20 24 Z" stroke="#5b21b6" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+          <path d="M20 24 L40 4" stroke="#5b21b6" stroke-width="1.5" fill="none"/>
+        </svg>
+        <svg class="doodle" width="28" height="28" viewBox="0 0 28 28">
+          <path d="M14 2 L16.5 10 L25 10 L18 15 L20.5 23 L14 18 L7.5 23 L10 15 L3 10 L11.5 10Z" stroke="#5b21b6" stroke-width="2" fill="none"/>
+        </svg>
+      </div> -->
+
+      <!-- Boutons CTA -->
+      <!-- <div class="hero-btns">
+        <a href="#service" class="btn-primary">Portfolio ↗</a>
+        <a href="#contact" class="btn-secondary">Hire me</a>
+      </div> -->
+
+    </div><!-- /hero-visual -->
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       SERVICES
+  ════════════════════════════════════════ -->
+  <section id="service">
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="services-header">
+      <h2><span>Mes</span> Projets</h2>
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales</p> -->
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Card 1 -->
+    <a class="service-card" href="https://chesslens.fr" target="_blank">
+      <h3>ChessLens</h3>
+
+      <div class="service-mockup">
+        <img src="assets/e.jpg" alt="ChessLens preview" class="service-image">
+      </div>
+
+      <div class="service-arrow">↗</div>
+    </a>
+
+      <!-- Card 1 -->
+    <a class="service-card" href="https://app.le-coin.fr" target="_blank">
+      <h3>ChessLens</h3>
+
+      <div class="service-mockup">
+        <img src="assets/e.jpg" alt="ChessLens preview" class="service-image">
+      </div>
+
+      <div class="service-arrow">↗</div>
+    </a>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <h3>Projets Xefi</h3>
+        <div class="service-mockup">
+          <div class="mockup-ui">
+            <div class="mockup-panel">
+              <div class="mockup-bar accent"></div>
+              <div class="mockup-bar"></div>
+              <div class="mockup-bar short"></div>
+              <div class="mockup-dot" style="opacity:.4"></div>
+            </div>
+            <div class="mockup-panel" style="flex:2">
+              <div class="mockup-bar" style="height:50px;margin-bottom:8px;background:rgba(249,115,22,0.15);border-radius:6px;"></div>
+              <div class="mockup-bar"></div>
+              <div class="mockup-bar short"></div>
+            </div>
+          </div>
+        </div>
+        <div class="service-arrow">↗</div>
+      </div>
+
+    </div><!-- /services-grid -->
+
+    <div class="carousel-dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       WORK EXPERIENCE
+  ════════════════════════════════════════ -->
+  <section id="resume">
+
+    <h2>Mon <span>expérience professionnelle</span></h2>
+
+    <div class="timeline">
+
+      <!-- Ligne 1 -->
+      <div class="timeline-item left">
+        <div class="company">Xefi, DailyApps Auto</div>
+        <div class="date">Sep 2025 – actuellement</div>
+      </div>
+      <div class="timeline-center">
+        <div class="timeline-node"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-item right">
+        <div class="role">Developpeur Back-end</div>
+        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales</div>
+      </div>
+
+      <!-- Ligne 2 -->
+      <div class="timeline-item left">
+        <div class="company">Université Claude Bernard</div>
+        <div class="date">Sep 2020 – July 2023</div>
+      </div>
+      <div class="timeline-center">
+        <div class="timeline-node filled"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-item right">
+        <div class="role">Licence informatique</div>
+        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales</div>
+      </div>
+
+      <!-- Ligne 3 -->
+      <div class="timeline-item left">
+        <div class="company">Lycée Charlie Chaplin</div>
+        <div class="date">Sep 2023</div>
+      </div>
+      <div class="timeline-center last">
+        <div class="timeline-node"></div>
+      </div>
+      <div class="timeline-item right">
+        <div class="role">Bac S</div>
+      </div>
+    
+
+    </div><!-- /timeline -->
+          <a style="justify-content: center;" href="assets/14.pdf" target="_blank" class="btn-hire">Telecharger mon CV</a>
+
+  </section>
+
+
+
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="hire-inner">
+
+      <div class="hire-photo-wrap">
+        <div class="hire-orange-bg"></div>
+        <!--
+          PHOTO : remplace ce SVG par une vraie image :
+          <img class="hire-photo" src="assets/jenny-hire.png" alt="Jenny">
+        -->
+        <img class="hire-photo" src="assets/enys.png" alt="Enys">
+      </div>
+
+      <div class="hire-content">
+        <h2>Pourquoi <span>moi ? </span></h2>
+        <div class="contact-info">
+          <p>06 19 86 39 47</p>
+          <p><a href="mailto:e.tchenar@gmail.com">e.tchenar@gmail.com</a></p>
+        </div>
+        <a href="mailto:e.tchenar@gmail.com" class="btn-hire">Me Contacter</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer>
+    © 2026 Enys Tchenar
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
