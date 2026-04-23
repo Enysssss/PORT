@@ -49,6 +49,7 @@
   text-align: center;
   position: relative;
   z-index: 2;
+  margin-top: 20px;
   animation: fadeDown .7s .1s ease both;
 }
 
@@ -60,8 +61,8 @@
 .hero-visual {
   position: relative;
   width: 680px;
-  height: 760px;
-  margin-top: -40px;
+  height: 620px;
+  margin-top: -60px;
   z-index: 2;
   cursor: none;
 }
@@ -82,7 +83,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  height: 720px;
+  height: 580px;
   object-fit: cover;
   object-position: top;
   z-index: 1;
