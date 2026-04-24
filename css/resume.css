@@ -105,7 +105,57 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  #resume {
+    padding: 60px 5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  #resume {
+    padding: 50px 5vw;
+  }
+
+  /* Timeline empilée : ligne verticale à gauche */
   .timeline {
-    grid-template-columns: 1fr 40px 1fr;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding-left: 20px;
+    border-left: 2px dashed #ddd;
+    gap: 0;
+  }
+
+  .timeline-center {
+    display: none;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 6px;
+    position: relative;
+  }
+
+  .timeline-item.left {
+    padding-top: 20px;
+  }
+
+  .timeline-item.left::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 26px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--orange);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--orange);
+  }
+
+  .timeline-item.right {
+    padding-bottom: 28px;
   }
 }

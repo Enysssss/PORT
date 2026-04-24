@@ -111,4 +111,16 @@ footer {
   .hero-stats {
     display: none;
   }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 16px;
+    padding: 14px 28px;
+    gap: 10px;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 24px;
+  }
 }

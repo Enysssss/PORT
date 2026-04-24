@@ -195,14 +195,68 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hire-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: 240px 1fr;
+    gap: 48px;
   }
 
   .hire-photo-wrap {
-    display: flex;
-    justify-content: center;
+    width: 240px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 60px 5vw;
+  }
+
+  .hire-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hire-photo-wrap {
+    width: 200px;
+    height: 260px;
+    margin: 0 auto;
+  }
+
+  .hire-tagline {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact {
+    padding: 50px 5vw;
+  }
+
+  .hire-photo-wrap {
+    width: 160px;
+    height: 210px;
+  }
+
+  .why-list li {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .why-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .contact-link {
+    font-size: 13px;
+  }
+
+  .btn-hire {
+    font-size: 14px;
+    padding: 12px 32px;
+    width: 100%;
+    text-align: center;
   }
 }

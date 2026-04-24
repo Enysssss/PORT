@@ -49,7 +49,7 @@
   text-align: center;
   position: relative;
   z-index: 2;
-  margin-top: 20px;
+  margin-top: 10px;
   animation: fadeDown .7s .1s ease both;
 }
 
@@ -62,7 +62,7 @@
   position: relative;
   width: 680px;
   height: 620px;
-  margin-top: -60px;
+  margin-top: -45px;
   z-index: 2;
   cursor: none;
 }
@@ -193,3 +193,77 @@
 .doodle:nth-child(9)  { top: 68%; left: 10%; transition-delay: .15s; }
 .doodle:nth-child(10) { top: 5%;  left: 25%; transition-delay: .07s; }
 .doodle:nth-child(11) { top: 72%; left: 65%; transition-delay: .18s; }
+
+/* ── Responsive ── */
+
+/* Tablette (769–1024px) */
+@media (max-width: 1024px) {
+  .hero-visual {
+    width: 520px;
+    height: 500px;
+  }
+  .hero-circle {
+    width: 420px;
+    height: 420px;
+  }
+  .hero-photo {
+    height: 460px;
+  }
+}
+
+/* Mobile large (≤768px) */
+@media (max-width: 768px) {
+  #home {
+    padding-top: 80px;
+    justify-content: flex-start;
+    padding-bottom: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(34px, 9vw, 56px);
+    margin-top: 16px;
+    padding: 0 16px;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 380px;
+    height: 380px;
+    margin-top: -20px;
+  }
+
+  .hero-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-photo {
+    height: 360px;
+  }
+}
+
+/* Mobile petit (≤480px) */
+@media (max-width: 480px) {
+  #home {
+    padding-top: 70px;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 8vw, 40px);
+    margin-top: 12px;
+  }
+
+  .hero-visual {
+    max-width: 300px;
+    height: 310px;
+  }
+
+  .hero-circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-photo {
+    height: 295px;
+  }
+}

@@ -75,9 +75,29 @@ nav {
 @media (max-width: 768px) {
   nav {
     padding: 8px 14px;
+    width: min(600px, 92vw);
   }
   .nav-links a {
     font-size: 12px;
     padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 6px 10px;
+    top: 12px;
+  }
+  .nav-logo-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+  .nav-links {
+    gap: 2px;
+  }
+  .nav-links a {
+    font-size: 11px;
+    padding: 5px 8px;
   }
 }
